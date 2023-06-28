@@ -1,0 +1,7 @@
+steps:
+  - template: templates/setup.yml
+    parameters:
+       workingDirectory: '${{ parameters.workingDirectory}}'
+  - template: templates/lint.yml
+    parameters:
+       workingDirectory: '${{ parameters.workingDirectory}}'
