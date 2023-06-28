@@ -1,0 +1,13 @@
+parameters:
+- name: 'workingDirectory'
+  type: string    
+  default: '$(System.DefaultWorkingDirectory)'
+
+steps:
+
+- script:
+    curl https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+    tflint -v
+  displayName: "Install Linux TFLint"
+  name: "InstallTFLintonLinux"
+ 
