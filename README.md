@@ -52,9 +52,9 @@ resources:
   repositories:
     - repository: TerraformLinting
       type: github
-      name: duck-creek/ADO.Pipelines.Templates
+      name: github/ADO.Pipelines.Templates
       ref: tflint
-      endpoint: 'Duck Creek'
+      endpoint: 'githubendpoint'
 
 steps:
  - template: frameWork/terraform/tflint/main.yml@TerraformLinting
@@ -62,7 +62,7 @@ steps:
      workingDirectory: ${{ parameters.workingDirectory }
 ```  
 
-In this example, the TFLint templates are sourced from the duck-creek/ADO.Pipelines.Templates repository on GitHub. The parameters are provided to configure the TFLint pipeline according to the desired build configuration and stages.
+In this example, the TFLint templates are sourced from the github/ADO.Pipelines.Templates repository on GitHub. The parameters are provided to configure the TFLint pipeline according to the desired build configuration and stages.
 
 Make sure to adjust the repository name, branch name, and parameter values according to your project's requirements.
 
